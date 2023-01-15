@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Circle">
+        <item name="cornerRadius">50dp</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="strokeColor">@color/black</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="ButtonOrange" parent="Circle">
+        <item name="android:backgroundTint">@color/orange</item>
+    </style>
+    <style name="ButtonBlue" parent="Circle">
+        <item name="android:backgroundTint">@color/blue</item>
+    </style>
+    <style name="MyCalendarView">
+        <item name="cornerRadius">10dp</item>
+        <item name="android:background">@color/green</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="strokeColor">@color/black</item>
+    </style>
+</resources>
