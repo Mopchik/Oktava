@@ -3,6 +3,8 @@ package com.uxapp.oktava.storage.dao
 import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.uxapp.oktava.storage.model.DayOfCalendar
+import kotlinx.coroutines.flow.Flow
+import java.util.*
 
 @Dao
 interface DayOfCalendarDao {
@@ -15,5 +17,7 @@ interface DayOfCalendarDao {
     @Query("select * from calendar_times")
     suspend fun all():List<DayOfCalendar>
     @Query("select * from calendar_times")
-    fun getLiveData(): LiveData<List<DayOfCalendar>>
+    fun getFlow(): Flow<List<DayOfCalendar>>
+    @Query("select * from calendar_times where day = :calendar")
+    suspend fun getDayOfCalendar(calendar: Calendar): List<DayOfCalendar>
 }

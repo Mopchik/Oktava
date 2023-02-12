@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="Circle">
         <item name="cornerRadius">50dp</item>
         <item name="strokeWidth">2dp</item>
@@ -9,16 +10,98 @@
         <item name="android:textAllCaps">false</item>
         <item name="android:textSize">18sp</item>
     </style>
+
+    <style name="TextField">
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+    </style>
+
+    <style name="RoundedFilledTextField" parent="TextField">
+        <item name="android:background">@drawable/ic_roundborder</item>
+    </style>
+
+    <style name="WeeklyRoundedFilledTextField" parent="TextField">
+        <item name="android:background">@drawable/ic_border</item>
+    </style>
+
+    <style name="RoundedTransparentTextField" parent="TextField">
+        <item name="android:background">@drawable/ic_roundborder_transparent</item>
+    </style>
+
+    <style name="EditTextRoundedWhite" parent="RoundedFilledTextField">
+        <item name="android:inputType">text</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="EditTextRoundedTransparent" parent="RoundedTransparentTextField">
+        <item name="android:inputType">text</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="EditTextRoundedTransparentWhite" parent="EditTextRoundedTransparent">
+        <item name="android:background">@drawable/ic_roundborder_transparent_white</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="MineCustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">16sp</item>
+    </style>
+
     <style name="ButtonOrange" parent="Circle">
         <item name="android:backgroundTint">@color/orange</item>
     </style>
+
     <style name="ButtonBlue" parent="Circle">
         <item name="android:backgroundTint">@color/blue</item>
     </style>
+
+    <style name="ButtonBlack" parent="Circle">
+        <item name="android:backgroundTint">@color/black</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="ButtonWhite" parent="Circle">
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="strokeWidth">3dp</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="ButtonRoundBlack" parent="Circle">
+        <item name="cornerRadius">100dp</item>
+        <item name="android:backgroundTint">@color/black</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:alpha">0.5</item>
+    </style>
+
     <style name="MyCalendarView">
         <item name="cornerRadius">10dp</item>
         <item name="android:background">@color/green</item>
         <item name="strokeWidth">2dp</item>
         <item name="strokeColor">@color/black</item>
     </style>
+
+    <style name="NoFuckingBorder" parent="Widget.AppCompat.Button.Borderless">
+        <item name="cornerRadius">50dp</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="strokeColor">@color/black</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:shadowColor">#00FFFFFF</item>
+        <item name="android:shadowRadius">0</item>
+    </style>
+
 </resources>

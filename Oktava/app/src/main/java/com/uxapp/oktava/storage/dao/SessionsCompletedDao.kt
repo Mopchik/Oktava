@@ -2,7 +2,9 @@ package com.uxapp.oktava.storage.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
+import com.uxapp.oktava.storage.model.Recording
 import com.uxapp.oktava.storage.model.SessionCompleted
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface SessionsCompletedDao {
@@ -15,9 +17,9 @@ interface SessionsCompletedDao {
     @Query("select * from sessions_completed")
     suspend fun all():List<SessionCompleted>
     @Query("select * from sessions_completed")
-    fun getLiveData(): LiveData<List<SessionCompleted>>
+    fun getSessionsCompletedFlow(): Flow<List<SessionCompleted>>
     @Query("select * from sessions_completed where id == :sessionId")
-    fun getRecordingsOfSessionLiveData(sessionId: Long): LiveData<SessionCompleted>
+    fun getSessionByIdFlow(sessionId: Long): Flow<List<SessionCompleted>>
     @Query("select * from sessions_completed where id == :sessionId")
-    suspend fun getRecordingsOfSession(sessionId: Long): SessionCompleted
+    suspend fun getSessionById(sessionId: Long): List<SessionCompleted>
 }

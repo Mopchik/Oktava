@@ -82,7 +82,7 @@ class Converters {
     fun fromListString(list: List<String>): String{
         val strBuilder = StringBuilder()
         list.forEach {
-            strBuilder.append("$it ")
+            strBuilder.append("$it||||||||##")
         }
         return strBuilder.toString()
     }
@@ -90,7 +90,7 @@ class Converters {
     @TypeConverter
     fun toListString(listAsString: String): ArrayList<String>{
         val result = ArrayList<String>()
-        listAsString.split(" ").forEach {
+        listAsString.split("||||||||##").forEach {
             result.add(it)
         }
         return result

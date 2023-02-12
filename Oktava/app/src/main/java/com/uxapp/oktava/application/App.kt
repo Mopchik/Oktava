@@ -22,7 +22,7 @@ class App : Application() {
         Log.i("KOSTIK", "Application created")
         applicationComponent = DaggerApplicationComponent
             .factory()
-            .create(this, applicationDefaultScope)
+            .create(this, applicationDefaultScope, contentResolver)
         applicationComponent.inject(this)
     }
 

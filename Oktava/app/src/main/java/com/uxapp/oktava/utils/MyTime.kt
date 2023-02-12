@@ -1,9 +1,9 @@
 package com.uxapp.oktava.utils
 
 data class MyTime(
-    val hours: Int,
-    val minutes: Int,
-    val seconds: Int
+    var hours: Int,
+    var minutes: Int,
+    var seconds: Int
 ){
     companion object{
         fun from(timeInMillis: Long): MyTime{
@@ -15,5 +15,6 @@ data class MyTime(
             val second = temp
             return MyTime(hour.toInt(), minute.toInt(), second.toInt())
         }
+
     }
 }

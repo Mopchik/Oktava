@@ -1,5 +1,6 @@
 package com.uxapp.oktava.application
 
+import android.content.ContentResolver
 import android.content.Context
 import android.content.SharedPreferences
 import com.uxapp.oktava.utils.AppScope
@@ -23,7 +24,9 @@ interface ApplicationComponent {
                    applicationContext: Context,
                    @BindsInstance
                    @CoroutineScopeQualifier(Layer.APP)
-                   applicationScope: CoroutineScope
+                   applicationScope: CoroutineScope,
+                   @BindsInstance
+                   contentResolver: ContentResolver
         ): ApplicationComponent
     }
     fun inject(app: App)

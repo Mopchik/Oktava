@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="20dp">
+            <TextView
+                android:id="@+id/textViewRecordingsToday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Сегодня"
+                android:visibility="gone"
+                android:layout_marginTop="20dp"
+                android:textColor="#80000000"
+                android:textSize="14sp"  />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recordingsTodayRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"/>
+            <TextView
+                android:id="@+id/textViewRecordingsYesterday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Вчера"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:textColor="#80000000"
+                android:textSize="14sp" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recordingsYesterdayRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"/>
+            <TextView
+                android:id="@+id/textViewRecordingsThisWeek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="На этой неделе"
+                android:visibility="gone"
+                android:layout_marginTop="20dp"
+                android:textColor="#80000000"
+                android:textSize="14sp" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recordingsThisWeekRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"/>
+            <TextView
+                android:id="@+id/textViewRecordingsThisMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="В этом месяце"
+                android:visibility="gone"
+                android:layout_marginTop="20dp"
+                android:textColor="#80000000"
+                android:textSize="14sp" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recordingsThisMonthRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"/>
+            <TextView
+                android:id="@+id/textViewRecordingsBefore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Давно"
+                android:visibility="gone"
+                android:layout_marginTop="20dp"
+                android:textColor="#80000000"
+                android:textSize="14sp" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recordingsBeforeRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

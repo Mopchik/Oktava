@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp">
+    <ScrollView
+        android:id="@+id/notesCreateNotesScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:importantForAccessibility="noHideDescendants">
+            <Button
+                android:id="@+id/buttonAddNotesCreateNotes"
+                style="@style/ButtonWhite"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:text="Добавить ноты"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:cornerRadius="15dp" />
+            <ImageView
+                android:id="@+id/chosenNotesCreateNotesImageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+        </FrameLayout>
+    </ScrollView>
+
+
+</FrameLayout>

@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#408DFF">
+
+    <Button
+        android:id="@+id/buttonBeginTraining23"
+        style="@style/ButtonBlack"
+        android:layout_width="369dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="50dp"
+        android:text="Искать"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonBeginTraining9"
+        style="@style/ButtonWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Инди"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBeginTraining3" />
+
+    <Button
+        android:id="@+id/buttonBeginTraining10"
+        style="@style/ButtonWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="Рок"
+        app:layout_constraintStart_toEndOf="@+id/buttonBeginTraining9"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBeginTraining4" />
+
+    <Button
+        android:id="@+id/buttonBeginTraining11"
+        style="@style/ButtonWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="Панк"
+        app:layout_constraintStart_toEndOf="@+id/buttonBeginTraining10"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBeginTraining7" />
+
+    <Button
+        android:id="@+id/buttonBeginTraining12"
+        style="@style/ButtonWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="Металл"
+        app:layout_constraintStart_toEndOf="@+id/buttonBeginTraining11"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBeginTraining8" />
+
+    <Button
+        android:id="@+id/buttonBeginTraining13"
+        style="@style/ButtonWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Альтернатива"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBeginTraining9" />
+
+    <Button
+        android:id="@+id/buttonBeginTraining16"
+        style="@style/ButtonWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Кантри"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBeginTraining13" />
+
+    <Button
+        android:id="@+id/buttonBeginTraining20"
+        style="@style/ButtonWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Кантри"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBeginTraining16" />
+
+    <Button
+        android:id="@+id/buttonBeginTraining21"
+        style="@style/ButtonWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="Детство"
+        app:layout_constraintStart_toEndOf="@+id/buttonBeginTraining20"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBeginTraining16" />
+
+    <Button
+        android:id="@+id/buttonBeginTraining22"
+        style="@style/ButtonWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="Саундтрек"
+        app:layout_constraintStart_toEndOf="@+id/buttonBeginTraining21"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBeginTraining16" />
+
+    <Button
+        android:id="@+id/buttonBeginTraining17"
+        style="@style/ButtonWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="Ска"
+        app:layout_constraintStart_toEndOf="@+id/buttonBeginTraining16"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBeginTraining13" />
+
+    <Button
+        android:id="@+id/buttonBeginTraining18"
+        style="@style/ButtonWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="Фолк"
+        app:layout_constraintStart_toEndOf="@+id/buttonBeginTraining17"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBeginTraining13" />
+
+    <Button
+        android:id="@+id/buttonBeginTraining19"
+        style="@style/ButtonWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="Шансон"
+        app:layout_constraintStart_toEndOf="@+id/buttonBeginTraining18"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBeginTraining13" />
+
+    <Button
+        android:id="@+id/buttonBeginTraining14"
+        style="@style/ButtonWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="Джаз"
+        app:layout_constraintStart_toEndOf="@+id/buttonBeginTraining13"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBeginTraining9" />
+
+    <Button
+        android:id="@+id/buttonBeginTraining15"
+        style="@style/ButtonWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="Блюз"
+        app:layout_constraintStart_toEndOf="@+id/buttonBeginTraining14"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBeginTraining9" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="44dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@android:string/ok"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon_arrow_back" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="100dp"
+        android:text="Инструмент"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:text="Жанр"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBeginTraining24" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_search" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="14dp"
+        android:visibility="visible"
+        app:boxBackgroundColor="#00FFFFFF"
+        app:boxCornerRadiusBottomEnd="50dp"
+        app:boxCornerRadiusBottomStart="50dp"
+        app:boxCornerRadiusTopEnd="50dp"
+        app:boxCornerRadiusTopStart="50dp"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidth="3dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:hint="Исполнитель, песня, инструмент"
+            android:outlineProvider="none"
+            android:shadowColor="#00FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/buttonBeginTraining3"
+        style="@style/ButtonWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="1dp"
+        android:text="Поп"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <Button
+        android:id="@+id/buttonBeginTraining24"
+        style="@style/ButtonWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="1dp"
+        android:text="Гитара"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <Button
+        android:id="@+id/buttonBeginTraining26"
+        style="@style/ButtonWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="1dp"
+        android:text="Пианино"
+        app:layout_constraintStart_toEndOf="@+id/buttonBeginTraining24"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <Button
+        android:id="@+id/buttonBeginTraining4"
+        style="@style/ButtonWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="1dp"
+        android:text="Рэп"
+        app:layout_constraintStart_toEndOf="@+id/buttonBeginTraining3"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <Button
+        android:id="@+id/buttonBeginTraining7"
+        style="@style/ButtonWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="1dp"
+        android:text="Хип-хоп"
+        app:layout_constraintStart_toEndOf="@+id/buttonBeginTraining4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <Button
+        android:id="@+id/buttonBeginTraining8"
+        style="@style/ButtonWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="1dp"
+        android:text="R'n'B"
+        app:layout_constraintStart_toEndOf="@+id/buttonBeginTraining7"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

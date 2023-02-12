@@ -5,6 +5,8 @@ import com.uxapp.oktava.storage.model.Song
 import com.uxapp.oktava.utils.Layer
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -13,7 +15,7 @@ class SongsRepository @Inject constructor(
     @com.uxapp.oktava.utils.CoroutineScopeQualifier(Layer.APP)
     private val applicationScope: CoroutineScope
 ){
-    val liveData = songsLearningDao.getLiveData()
+    val allSongsFlow = songsLearningDao.getFlow()
 
     fun addNewItem(item: Song){
         applicationScope.launch(Dispatchers.IO) {
@@ -27,13 +29,27 @@ class SongsRepository @Inject constructor(
         }
     }
 
-    fun changeItem(newItem: Song) {
+    fun deleteItemById(id: Int) {
+        applicationScope.launch(Dispatchers.IO) {
+            songsLearningDao.removeSongById(id)
+        }
+    }
+
+    fun changeItem(newItem: Song?) {
+        if(newItem == null) return
         applicationScope.launch(Dispatchers.IO) {
             songsLearningDao.editSong(newItem)
         }
     }
 
-    suspend fun getSongById(id: Int): Song{
-        return songsLearningDao.getSongById(id)
+    suspend fun getSongById(id: Int): Song? {
+        val listResult = songsLearningDao.getSongById(id)
+        return if(listResult.isNotEmpty()) listResult.first() else null
+    }
+
+    fun getSongByIdFlow(id: Int): Flow<Song?> {
+        return songsLearningDao.getSongByIdFlow(id).map{
+            if(it.isNotEmpty()) it.first() else null
+        }
     }
 }

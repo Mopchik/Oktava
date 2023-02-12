@@ -3,18 +3,74 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/drawable-v20/background_achievements.xml" value="0.1165" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/drawable-v24/background_achievements.xml" value="0.1165" />
         <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/drawable/background_achievements.xml" value="0.1" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/drawable/background_black_circle_up_corners.xml" value="0.166" />
         <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/drawable/background_calendar_view.xml" value="0.1" />
         <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/drawable/background_container_next_training_text_view.xml" value="0.1" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/drawable/ic_baseline_check_circle_24.xml" value="0.122" />
         <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/drawable/ic_baseline_circle_24.xml" value="0.1" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.122" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.122" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/drawable/ic_baseline_edit_note_24.xml" value="0.148" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/drawable/ic_baseline_keyboard_arrow_down_24.xml" value="0.122" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/drawable/ic_baseline_keyboard_arrow_up_24.xml" value="0.122" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/drawable/ic_baseline_piano_24.xml" value="0.122" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/drawable/ic_baseline_star_24.xml" value="0.122" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/drawable/ic_baseline_star_outline_24.xml" value="0.122" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/drawable/ic_baseline_start_recording.xml" value="0.166" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/drawable/ic_baseline_stop_circle_24.xml" value="0.166" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/drawable/ic_border.xml" value="0.148" />
         <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/drawable/ic_roundborder.xml" value="0.148" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/drawable/ic_roundborder_transparent.xml" value="0.1485" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/drawable/ic_roundborder_transparent_white.xml" value="0.122" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/drawable/ic_search.xml" value="0.148" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/drawable/icon_arrow_back.xml" value="0.185" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/drawable/soft_start.xml" value="0.122" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/abstract_list_item.xml" value="0.2418478260869565" />
         <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/activity_main.xml" value="0.2625" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/activity_session.xml" value="0.2418478260869565" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/card.xml" value="0.4" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/fragment_about_song.xml" value="0.2" />
         <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/fragment_begin_training.xml" value="0.25769927536231885" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/fragment_card.xml" value="0.176" />
         <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/fragment_menu.xml" value="0.264" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/fragment_newsong.xml" value="0.1" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/fragment_notes.xml" value="0.2" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/fragment_notes_create_notes.xml" value="0.20878623188405798" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/fragment_recordings.xml" value="0.1" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/fragment_recordings_by_date.xml" value="0.2418478260869565" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/fragment_recordings_by_song.xml" value="0.2418478260869565" />
         <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/fragment_session.xml" value="0.1" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/fragment_session_in_progress.xml" value="0.2" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/fragment_session_notes.xml" value="0.2418478260869565" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/fragment_session_what_to_play.xml" value="0.2" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/fragment_session_words.xml" value="0.2418478260869565" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/fragment_songs.xml" value="0.2418478260869565" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/fragment_start_session_what_to_play.xml" value="0.1" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/fragment_step.xml" value="0.264" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/fragment_steps_in_sesssion.xml" value="0.152" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/fragment_words_creates_notes.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/item_little_song_card.xml" value="0.264" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/item_recording.xml" value="0.264" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/item_recording_with_image.xml" value="0.2" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/item_song_recordings.xml" value="0.1" />
         <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/item_spiska.xml" value="0.264" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/item_step_advice.xml" value="0.2418478260869565" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/little_item_spiska.xml" value="0.16394927536231885" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/newsong.xml" value="0.128" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/newsong1.xml" value="0.176" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/newsong2.xml" value="0.2" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/onboardingnotes1.xml" value="0.264" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/onboardingnotes2.xml" value="0.1276595744680851" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/onboardingnotes3.xml" value="0.16394927536231885" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/pls.xml" value="0.20878623188405798" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/searchnotfound.xml" value="0.1" />
         <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/test_fragment.xml" value="0.264" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/menu/menu_recording_item.xml" value="0.1421875" />
       </map>
     </option>
   </component>
