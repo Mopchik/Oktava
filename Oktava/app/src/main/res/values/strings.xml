@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Oktava</string>
+    <string name="calendar">Календарь</string>
+    <string name="exercises">Занятия</string>
+    <string name="past">Прошлые</string>
+    <string name="future">Будущие</string>
+    <string name="bottom_calendar">Тапни по дню, чтобы добавить или изменить занятие</string>
+    <string name="add_button">Добавить занятие</string>
+    <string name="first_day">пн</string>
+    <string name="second_day">вт</string>
+    <string name="third_day">ср</string>
+    <string name="fourth_day">чт</string>
+    <string name="fifth_day">пт</string>
+    <string name="sixth_day">сб</string>
+    <string name="seventh_day">вс</string>
+    <string name="every_week">Каждую неделю</string>
+    <string name="plan_lesson">Запланировать занятие</string>
+
 </resources>

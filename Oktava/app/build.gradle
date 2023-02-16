@@ -63,3 +63,11 @@ dependencies {
     // Test
     androidTestImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.2'
 }
+
+task wrapper(type: Wrapper){
+    gradleVersion = '7.2'
+}
+
+task prepareKotlinBuildScriptModel {
+
+}
