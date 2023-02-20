@@ -6,5 +6,6 @@
     <color name="rose">#FFA1CE</color>
     <color name="orange">#FF774C</color>
     <color name="blue">#408DFF</color>
+    <color name="grey">#696969</color>
     <color name="transparent">#00FFFFFF</color>
 </resources>
