@@ -76,6 +76,13 @@
         <item name="android:textSize">15sp</item>
     </style>
 
+    <style name="ButtonGreen" parent="Circle">
+        <item name="android:backgroundTint">@color/green</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="strokeWidth">3dp</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
     <style name="ButtonRoundBlack" parent="Circle">
         <item name="cornerRadius">100dp</item>
         <item name="android:backgroundTint">@color/black</item>
@@ -107,6 +114,12 @@
     <style name="ShapeAppearanceOverlay.MaterialComponents.Chip" parent="">
         <item name="cornerSize">50%</item>
         <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MaterialComponents.Chip</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/black</item>
     </style>
 
 </resources>
