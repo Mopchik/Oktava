@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.uxapp.oktava.storage.interactors.CalendarInteractor
 import com.uxapp.oktava.storage.interactors.RecordingsInteractor
+import com.uxapp.oktava.storage.interactors.ScheduleInteractor
 import com.uxapp.oktava.storage.interactors.SongsInteractor
 import com.uxapp.oktava.storage.repositories.*
 import com.uxapp.oktava.utils.AppScope
@@ -21,14 +22,13 @@ class ViewModelFactory @Inject constructor(
     private val scheduleTimesRep: ScheduleTimesRepository,
     private val recordingsMapper: RecordingsInteractor,
     private val songsInteractor: SongsInteractor,
+    private val scheduleInteractor: ScheduleInteractor,
     private val prefs: SharedPreferences): ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T = when (modelClass) {
         CalendarViewModel::class.java ->
             CalendarViewModel(
-                sessionsRep,
-                calendarTimesRep,
+                scheduleInteractor,
                 calendarInteractor,
-                scheduleTimesRep,
                 recordingsRep
             )
         RecordingsViewModel::class.java ->

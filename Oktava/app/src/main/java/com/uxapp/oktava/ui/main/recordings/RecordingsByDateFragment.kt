@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
@@ -34,6 +35,8 @@ class RecordingsByDateFragment: Fragment() {
     private lateinit var yesterdayTextView: TextView
     private lateinit var weekTextView: TextView
     private lateinit var monthTextView: TextView
+
+    private lateinit var bubbleRecordings: ImageView
 
     private val todayAdapter = RecordingsAdapter(
         withImage = true
@@ -69,6 +72,7 @@ class RecordingsByDateFragment: Fragment() {
         val view = inflater.inflate(R.layout.fragment_recordings_by_date, container, false)
         setupViews(view)
         setupRecyclers()
+        setupBubble()
         return view
     }
 
@@ -85,6 +89,8 @@ class RecordingsByDateFragment: Fragment() {
             weekTextView = findViewById(R.id.textViewRecordingsThisWeek)
             monthTextView = findViewById(R.id.textViewRecordingsThisMonth)
             beforeTextView = findViewById(R.id.textViewRecordingsBefore)
+
+            bubbleRecordings = findViewById(R.id.bubbleRecordingsImageView)
         }
     }
 
@@ -143,6 +149,16 @@ class RecordingsByDateFragment: Fragment() {
                 beforeAdapter.submitList(it)
                 beforeAdapter.notifyDataSetChanged()
             }
+        }
+    }
+
+    private fun setupBubble(){
+        val prefs = (requireActivity() as MainActivity).bubblePrefs
+        if(prefs.getBoolean("isFirstRecordings", true)) {
+            bubbleRecordings.visibility = View.VISIBLE
+            prefs.edit().putBoolean("isFirstRecordings", false).apply()
+        } else {
+            bubbleRecordings.visibility = View.GONE
         }
     }
 }

@@ -29,7 +29,7 @@ class Converters {
         val second = intArray[5]
         return Calendar.getInstance().apply{
             set(year, month, day)
-            set(Calendar.HOUR, hour)
+            set(Calendar.HOUR_OF_DAY, hour)
             set(Calendar.MINUTE, minute)
             set(Calendar.SECOND, second)}
     }
@@ -40,7 +40,7 @@ class Converters {
         else calendar.get(Calendar.DAY_OF_MONTH).toString() + " " +
                 calendar.get(Calendar.MONTH) + " " +
                 calendar.get(Calendar.YEAR) + " " +
-                calendar.get(Calendar.HOUR) + " " +
+                calendar.get(Calendar.HOUR_OF_DAY) + " " +
                 calendar.get(Calendar.MINUTE) + " " +
                 calendar.get(Calendar.SECOND)
     }

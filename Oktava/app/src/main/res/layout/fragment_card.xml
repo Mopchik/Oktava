@@ -213,7 +213,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/transparent"
                 android:contentDescription="Удалить карточку песни"
-                android:visibility="gone"
+                android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/editCardImageButton"
                 app:layout_constraintTop_toTopOf="parent"

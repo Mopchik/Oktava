@@ -2,6 +2,7 @@ package com.uxapp.oktava.storage.repositories
 
 import com.uxapp.oktava.storage.dao.DayOfScheduleDao
 import com.uxapp.oktava.storage.model.DayOfSchedule
+import com.uxapp.oktava.utils.DayOfWeek
 import com.uxapp.oktava.utils.Layer
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -32,6 +33,10 @@ class ScheduleTimesRepository @Inject constructor(
         applicationScope.launch(Dispatchers.IO) {
             scheduleDao.addDayOfSchedule(item)
         }
+    }
+
+    suspend fun getDayOfScheduleByDayOfWeek(dayOfWeek: DayOfWeek): DayOfSchedule? {
+        return scheduleDao.getDayOfScheduleByDayOfWeek(dayOfWeek).firstOrNull()
     }
 
     fun deleteItem(item: DayOfSchedule) {

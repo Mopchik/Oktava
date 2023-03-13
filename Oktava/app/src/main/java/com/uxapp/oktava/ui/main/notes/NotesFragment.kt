@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -28,6 +29,7 @@ class NotesFragment : Fragment() {
 
     private lateinit var notesBackButton: ImageButton
     private lateinit var createCardButton: Button
+    private lateinit var bubbleCreateSong: ImageView
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -38,6 +40,7 @@ class NotesFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_notes, container, false)
         setupViews(view)
         setupButtons()
+        setupBubble()
         childFragmentManager.beginTransaction()
             .replace(R.id.songsContainer, NotesSongsFragment())
             .commit()
@@ -47,6 +50,7 @@ class NotesFragment : Fragment() {
     private fun setupViews(view: View) {
         notesBackButton = view.findViewById(R.id.notesBackButton)
         createCardButton = view.findViewById(R.id.createCardButton)
+        bubbleCreateSong = view.findViewById(R.id.bubbleCreateNotesImageView)
     }
 
     private fun setupButtons(){
@@ -59,6 +63,16 @@ class NotesFragment : Fragment() {
                 .replace(R.id.fragment_container, CreateAndEditNotesFragment())
                 .addToBackStack(null)
                 .commit()
+        }
+    }
+
+    private fun setupBubble(){
+        val prefs = (requireActivity() as MainActivity).bubblePrefs
+        if(prefs.getBoolean("isFirstNotes", true)) {
+            bubbleCreateSong.visibility = View.VISIBLE
+            prefs.edit().putBoolean("isFirstNotes", false).apply()
+        } else {
+            bubbleCreateSong.visibility = View.GONE
         }
     }
 }

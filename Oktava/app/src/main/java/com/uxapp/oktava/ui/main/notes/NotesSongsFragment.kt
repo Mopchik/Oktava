@@ -34,7 +34,7 @@ class NotesSongsFragment: BaseSongsFragment<SongInListModel>() {
 
     private fun onSongItemClicked(songId: Int) {
         songsViewModel.songsChooseProcess.choose(songId)
-        parentFragmentManager.beginTransaction()
+        requireActivity().supportFragmentManager.beginTransaction()
             .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
             .replace(R.id.fragment_container, SongCardFragment())
             .addToBackStack(null)

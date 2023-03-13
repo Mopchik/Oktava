@@ -31,11 +31,16 @@ class PlayerWorker(private val context: Context, private val recordingName: Stri
         mediaPlayer.start()
     }
 
+    fun setOnCompletionListener(listener: MediaPlayer.OnCompletionListener) {
+        mediaPlayer.setOnCompletionListener(listener)
+    }
+
     fun pause() = mediaPlayer.pause()
 
     fun resume() = mediaPlayer.start()
 
     fun stop() {
         mediaPlayer.stop()
+        mediaPlayer.release()
     }
 }

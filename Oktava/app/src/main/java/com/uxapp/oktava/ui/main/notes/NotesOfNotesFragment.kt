@@ -64,9 +64,11 @@ class NotesOfNotesFragment : Fragment() {
     }
 
     private fun setupImageView(notesFilePath: String?) {
-        val imageBitmap = ImageReader.readSafeBitmapFromFileAbsolutePath(
-            notesFilePath
-        )
+        val imageBitmap = if ((requireActivity() as MainActivity).requestPermissions()) {
+            ImageReader.readSafeBitmapFromFileAbsolutePath(
+                notesFilePath
+            )
+        } else null
         if (imageBitmap == null) {
             buttonChooseNotes.visibility = View.VISIBLE
             chosenNotesImageView.visibility = View.GONE
@@ -75,6 +77,9 @@ class NotesOfNotesFragment : Fragment() {
             }
         } else {
             chosenNotesImageView.setImageBitmap(imageBitmap)
+            chosenNotesImageView.setOnClickListener {
+                startChoosingImage()
+            }
             buttonChooseNotes.visibility = View.GONE
             chosenNotesImageView.visibility = View.VISIBLE
         }

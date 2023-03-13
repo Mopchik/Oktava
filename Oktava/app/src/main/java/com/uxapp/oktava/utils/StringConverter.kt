@@ -50,6 +50,11 @@ object StringConverter {
         }
     }
 
+    fun calendarToTimeDayMonthString(calendar: Calendar): String {
+        return calendarToDayMonthString(calendar) + " " +
+                intsToTime(calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE))
+    }
+
     fun calendarToDayMonthString(calendar: Calendar): String{
         val day = calendar.get(Calendar.DAY_OF_MONTH)
         val month = when(calendar.get(Calendar.MONTH)){
@@ -71,8 +76,12 @@ object StringConverter {
     }
 
     fun myTimeToMinuteSecondString(myTime: MyTime): String {
-        val minutes = if(myTime.minutes / 10 > 0) myTime.minutes.toString() else "0${myTime.minutes}"
-        val seconds = if(myTime.seconds / 10 > 0) myTime.seconds.toString() else "0${myTime.seconds}"
+        return intsToTime(myTime.minutes, myTime.seconds)
+    }
+
+    fun intsToTime(first: Int, second: Int): String {
+        val minutes = if(first / 10 > 0) first.toString() else "0${first}"
+        val seconds = if(second / 10 > 0) second.toString() else "0${second}"
         return "$minutes:$seconds"
     }
 
@@ -83,5 +92,47 @@ object StringConverter {
                     in 2..4 -> "записи"
                     else -> "записей"
                 }
+    }
+
+    fun getStringHours(h: Int): String {
+        return "$h " + when(h) {
+            1 -> "час"
+            2,3,4 -> "часа"
+            else -> "часов"
+        }
+    }
+
+    fun getStringMinutes(m: Int): String {
+        return "$m " + when(m) {
+            1,21,31,41,51 -> "минуту"
+            11,12,13,14 -> "минут"
+            else -> {
+                when(m%10) {
+                    2, 3, 4 -> "минуты"
+                    else -> "минут"
+                }
+            }
+        }
+    }
+
+    fun getStringSteps(s: Int): String {
+        return "$s " + when(s) {
+            11, 12, 13, 14 -> "шагов"
+            else -> {
+                when(s%10) {
+                    0, 5, 6, 7, 8, 9 -> "шагов"
+                    1 -> "шаг"
+                    else -> "шага"
+                }
+            }
+        }
+    }
+
+    fun getStringSongs(s: Int): String {
+        return "$s " + if(s % 10 == 1 && s != 11) {
+            "песне"
+        } else {
+            "песнях"
+        }
     }
 }

@@ -18,7 +18,7 @@
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ноты"
+                android:text="Песни"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:layout_marginStart="25dp"
@@ -46,6 +46,15 @@
         android:layout_height="0dp"
         app:layout_constraintTop_toBottomOf="@id/notesToolbar"
         app:layout_constraintBottom_toTopOf="@id/createCardButton"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/bubbleCreateNotesImageView"
+        android:layout_width="250dp"
+        android:layout_height="230dp"
+        android:visibility="visible"
+        app:srcCompat="@drawable/bubble_create_song"
+        app:layout_constraintBottom_toTopOf="@id/createCardButton"
+        app:layout_constraintStart_toStartOf="@id/createCardButton"/>
 
     <Button
         android:id="@+id/createCardButton"

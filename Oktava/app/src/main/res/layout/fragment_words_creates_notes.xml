@@ -11,9 +11,10 @@
         style="@style/EditTextRoundedWhite"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:minHeight="200dp"
         android:maxLines="500"
         android:inputType="textMultiLine"
-        android:hint="Введите текст песни"
+        android:hint="Скопируй текст песни из интернета"
         android:contentDescription="Ввод текста песни" />
 
 </FrameLayout>

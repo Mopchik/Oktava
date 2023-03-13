@@ -51,6 +51,16 @@
         <item name="android:textSize">15sp</item>
     </style>
 
+    <style name="MyChipStyle" parent="Widget.MaterialComponents.Chip.Filter">
+        <item name="chipStrokeWidth">3dp</item>
+        <item name="chipStrokeColor">@color/black</item>
+        <item name="chipCornerRadius">50dp</item>
+        <item name="chipStartPadding">0dp</item>
+        <item name="chipEndPadding">0dp</item>
+        <item name="checkedIcon">@null</item>
+        <item name="chipBackgroundColor">@drawable/bg_chip_state_list</item>
+    </style>
+
     <style name="MineCustomTabText" parent="TextAppearance.Design.Tab">
         <item name="android:textSize">16sp</item>
     </style>

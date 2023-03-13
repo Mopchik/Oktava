@@ -109,10 +109,12 @@ class AboutNotesFragment : Fragment() {
     }
 
     private fun setupImageView(songAboutModel: SongAboutModel) {
-        val imageBitmap = ImageReader.readSafeBitmapFromFileAbsolutePathWithWidth(
-            songAboutModel.filePicture, imageFrameLayout.layoutParams.width
-        )
-        if(imageBitmap == null){
+        val imageBitmap = if ((requireActivity() as MainActivity).requestPermissions()) {
+            ImageReader.readSafeBitmapFromFileAbsolutePathWithWidth(
+                songAboutModel.filePicture, imageFrameLayout.layoutParams.width
+            )
+        } else null
+        if (imageBitmap == null) {
             buttonChooseImage.visibility = View.VISIBLE
             chosenImageView.visibility = View.GONE
             buttonChooseImage.setOnClickListener {
@@ -120,20 +122,23 @@ class AboutNotesFragment : Fragment() {
             }
         } else {
             chosenImageView.setImageBitmap(imageBitmap)
+            chosenImageView.setOnClickListener {
+                startChoosingImage()
+            }
             buttonChooseImage.visibility = View.GONE
             chosenImageView.visibility = View.VISIBLE
         }
 
     }
 
-    private fun setUpGenresChipGroup(songAboutModel: SongAboutModel){
+    private fun setUpGenresChipGroup(songAboutModel: SongAboutModel) {
         genresChipGroup.children.forEach {
             val chip = (it as Chip)
             chip.isChecked = songAboutModel.genres.contains(
                 StringConverter.genreFromString(chip.text.toString())
             )
         }
-        genresChipGroup.setOnCheckedStateChangeListener{ _, _ ->
+        genresChipGroup.setOnCheckedStateChangeListener { _, _ ->
             songsViewModel.songsCreationProcess.setGenres(getListOfGenres())
         }
     }

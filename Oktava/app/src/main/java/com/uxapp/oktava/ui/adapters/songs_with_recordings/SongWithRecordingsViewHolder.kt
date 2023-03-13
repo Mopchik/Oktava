@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.uxapp.oktava.R
 import com.uxapp.oktava.file_worker.image.ImageReader
 import com.uxapp.oktava.ui.adapters.recordings.RecordingsAdapter
+import com.uxapp.oktava.ui.main.MainActivity
 import com.uxapp.oktava.ui.main.models.SongWithRecordingsModel
 import com.uxapp.oktava.utils.StringConverter
 import com.uxapp.oktava.viewmodels.RecordingsViewModel
@@ -55,10 +56,12 @@ class SongWithRecordingsViewHolder(
                 recordingsRecyclerView.visibility = View.VISIBLE
             }
         }
-        val imageBitmap = ImageReader.readSafeBitmapFromFileAbsolutePathWithWidth(
-            item.filePicture, songImageView.layoutParams.width
-        ) ?: return
-        songImageView.setImageBitmap(imageBitmap)
+        if((itemView.context as MainActivity).requestPermissions()) {
+            val imageBitmap = ImageReader.readSafeBitmapFromFileAbsolutePathWithWidth(
+                item.filePicture, songImageView.layoutParams.width
+            ) ?: return
+            songImageView.setImageBitmap(imageBitmap)
+        }
     }
 
     @SuppressLint("NotifyDataSetChanged")

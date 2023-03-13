@@ -4,10 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.FrameLayout
-import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.lifecycleScope
@@ -15,6 +12,7 @@ import com.google.android.material.tabs.TabLayout
 import com.uxapp.oktava.R
 import com.uxapp.oktava.file_worker.image.ImageReader
 import com.uxapp.oktava.ui.main.MainActivity
+import com.uxapp.oktava.ui.main.calendar.CalendarFragment
 import com.uxapp.oktava.utils.setupImageViewFromFile
 import com.uxapp.oktava.utils.setupTextViewNotEmpty
 import com.uxapp.oktava.viewmodels.dataModels.SongCardModel
@@ -45,6 +43,7 @@ class SongCardFragment : Fragment() {
     private lateinit var deleteImageButton: ImageButton
     private lateinit var editImageButton: ImageButton
     private lateinit var backImageButton: ImageButton
+    private lateinit var planButton: Button
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -76,6 +75,8 @@ class SongCardFragment : Fragment() {
         notesImageView = view.findViewById(R.id.notesSongCardImageView)
         wordsTextView = view.findViewById(R.id.wordsSongCardTextView)
         wordsNotesTabLayout = view.findViewById(R.id.wordsNotesTabLayout)
+
+        planButton = view.findViewById(R.id.planButton)
 
         setupSongCardInfo()
         setupButtons()
@@ -112,6 +113,13 @@ class SongCardFragment : Fragment() {
         }
         backImageButton.setOnClickListener {
             requireActivity().onBackPressed()
+        }
+        planButton.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                .replace(R.id.fragment_container, CalendarFragment())
+                .addToBackStack(null)
+                .commit()
         }
     }
 

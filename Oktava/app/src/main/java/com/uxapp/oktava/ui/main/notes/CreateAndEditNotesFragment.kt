@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentContainerView
 import androidx.fragment.app.FragmentTransaction
@@ -30,6 +31,7 @@ class CreateAndEditNotesFragment : Fragment() {
     private lateinit var tabLayout: TabLayout
     private lateinit var buttonSave: Button
     private lateinit var buttonBack: ImageButton
+    private lateinit var titleTextView: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         runBlocking {
@@ -47,11 +49,17 @@ class CreateAndEditNotesFragment : Fragment() {
         tabLayout = view.findViewById(R.id.createNotesTabLayout)
         buttonSave = view.findViewById(R.id.buttonSave)
         buttonBack = view.findViewById(R.id.createNotesBackButton)
+        titleTextView = view.findViewById(R.id.notesCreateTitleTextView)
         init()
         return view
     }
 
     private fun init() {
+        titleTextView.text = if(songsViewModel.songsChooseProcess.isChosen()) {
+            "Редактировать"
+        } else {
+            "Создать карточку"
+        }
         childFragmentManager.beginTransaction()
             .replace(R.id.notesFragmentContainer, AboutNotesFragment())
             .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)

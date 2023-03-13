@@ -13,6 +13,9 @@ class RecordingsAdapter(
     private val onDelete: (recordingPath: String) -> Unit
     // private val onItemClicked: (recordingPath: String)->Unit
 ):  ListAdapter<RecordingModel, RecordingsPlayerBaseViewHolder>(RecordingsDiffCallback()) {
+
+    private var currentPlayedHolder: RecordingsPlayerBaseViewHolder? = null
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecordingsPlayerBaseViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         return if(!withImage){
@@ -31,5 +34,15 @@ class RecordingsAdapter(
 
     override fun onBindViewHolder(holder: RecordingsPlayerBaseViewHolder, position: Int) {
         holder.bind(currentList[position])
+        holder.setOnClickAction {
+            if(currentPlayedHolder != holder) {
+                try {
+                    currentPlayedHolder?.removePlayPauseIcons()
+                    currentPlayedHolder?.stopPlaying()
+                } catch (e: Exception) {
+                }
+                currentPlayedHolder = holder
+            }
+        }
     }
 }

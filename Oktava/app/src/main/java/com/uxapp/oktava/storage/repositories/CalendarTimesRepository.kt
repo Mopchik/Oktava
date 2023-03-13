@@ -4,6 +4,7 @@ import com.uxapp.oktava.storage.dao.DayOfCalendarDao
 import com.uxapp.oktava.storage.model.DayOfCalendar
 import com.uxapp.oktava.storage.model.Song
 import com.uxapp.oktava.utils.Layer
+import com.uxapp.oktava.utils.datesEquals
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.*
@@ -52,7 +53,7 @@ class CalendarTimesRepository @Inject constructor(
     fun getDayOfCalendar(calendar: Calendar): DayOfCalendar? {
         val daysOfCalendarCopy = daysOfCalendar.toList()
         return try{
-            daysOfCalendarCopy.first { it.day.timeInMillis == calendar.timeInMillis }
+            daysOfCalendarCopy.first { it.day.datesEquals(calendar) }
         } catch(e: NoSuchElementException){
             null
         }

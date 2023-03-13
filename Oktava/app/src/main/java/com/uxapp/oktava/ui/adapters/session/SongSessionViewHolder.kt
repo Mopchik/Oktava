@@ -6,6 +6,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.uxapp.oktava.R
 import com.uxapp.oktava.file_worker.image.ImageReader
+import com.uxapp.oktava.ui.main.MainActivity
+import com.uxapp.oktava.ui.session.SessionActivity
 import com.uxapp.oktava.viewmodels.dataModels.SongSessionModel
 
 class SongSessionViewHolder(
@@ -23,9 +25,11 @@ class SongSessionViewHolder(
         itemView.setOnClickListener {
             onItemClicked(item.id)
         }
-        val imageBitmap = ImageReader.readSafeBitmapFromFileAbsolutePathWithWidth(
-            item.filePicture, songSessionImageView.layoutParams.width
-        ) ?: return
-        songSessionImageView.setImageBitmap(imageBitmap)
+        if((itemView.context as SessionActivity).requestPermissions()) {
+            val imageBitmap = ImageReader.readSafeBitmapFromFileAbsolutePathWithWidth(
+                item.filePicture, songSessionImageView.layoutParams.width
+            ) ?: return
+            songSessionImageView.setImageBitmap(imageBitmap)
+        }
     }
 }

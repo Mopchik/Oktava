@@ -1,7 +1,9 @@
 package com.uxapp.oktava.ui.adapters.recordings
 
+import android.media.Image
 import android.view.View
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.uxapp.oktava.R
@@ -23,6 +25,8 @@ class RecordingsViewHolder(
     private val durationTextView = itemView.findViewById<TextView>(R.id.durationRecordingTextView)
     private val descriptionTextView = itemView.findViewById<TextView>(R.id.descriptionRecordingTextView)
     private val deleteImageButton = itemView.findViewById<ImageButton>(R.id.deleteSongActionMenu)
+    private val playImageView = itemView.findViewById<ImageView>(R.id.playRecordingImageView)
+    private val pauseImageView = itemView.findViewById<ImageView>(R.id.pauseRecordingImageView)
 
     override fun bind(item: RecordingModel) {
         super.bind(item)
@@ -38,6 +42,29 @@ class RecordingsViewHolder(
         //     item.filePicture, songSessionImageView.layoutParams.width
         // ) ?: return
         // songSessionImageView.setImageBitmap(imageBitmap)
+    }
+
+    override fun onComplete() {
+        if(playImageView.visibility != View.VISIBLE &&
+            pauseImageView.visibility != View.VISIBLE) {
+            return
+        }
+        setIcon(false)
+    }
+
+    override fun setIcon(isPlaying: Boolean) {
+        if(isPlaying) {
+            playImageView.visibility = View.GONE
+            pauseImageView.visibility = View.VISIBLE
+        } else {
+            pauseImageView.visibility = View.GONE
+            playImageView.visibility = View.VISIBLE
+        }
+    }
+
+    override fun removePlayPauseIcons() {
+        pauseImageView.visibility = View.GONE
+        playImageView.visibility = View.GONE
     }
 
 }

@@ -17,7 +17,7 @@
                 android:id="@+id/textViewNotesInProgress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="В прогрессе"
+                android:text="В процессе"
                 android:visibility="gone"
                 android:layout_marginTop="20dp"
                 android:textColor="#80000000"

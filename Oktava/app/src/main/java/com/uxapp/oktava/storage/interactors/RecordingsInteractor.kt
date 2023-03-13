@@ -70,7 +70,8 @@ class RecordingsInteractor @Inject constructor(
         return hours / 24 / 7
     }
 
-    suspend fun mapRecordingToRecordingModel(recording: Recording): RecordingModel? {
+    suspend fun mapRecordingToRecordingModel(recording: Recording?): RecordingModel? {
+        if(recording == null) return null
         val recordingSong = songsRepository.getSongById(recording.idOfSong) ?: return null
         return RecordingModel(
             name = recording.path,

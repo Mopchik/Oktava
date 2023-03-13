@@ -7,7 +7,7 @@ import com.uxapp.oktava.R
 import com.uxapp.oktava.viewmodels.dataModels.SongInListModel
 
 class SongsAdapter(
-    val onItemClicked: (songId: Int)->Unit
+    private val onItemClicked: (songId: Int)->Unit
 ):  ListAdapter<SongInListModel, SongInListViewHolder>(SongInListDiffCallback()) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SongInListViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)

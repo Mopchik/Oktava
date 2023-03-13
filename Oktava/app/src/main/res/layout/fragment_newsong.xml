@@ -51,10 +51,11 @@
                 app:srcCompat="@drawable/icon_arrow_back" />
 
             <TextView
+                android:id="@+id/notesCreateTitleTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
-                android:text="Создать ноты"
+                android:text="Создать карточку"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"

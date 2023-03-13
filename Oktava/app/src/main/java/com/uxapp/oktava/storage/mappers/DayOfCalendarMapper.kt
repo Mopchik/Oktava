@@ -7,7 +7,7 @@ import java.util.*
 object DayOfCalendarMapper {
     fun mapToMyTimeWithoutSeconds(calendar: Calendar): MyTime {
         return MyTime(
-            calendar.get(Calendar.HOUR),
+            calendar.get(Calendar.HOUR_OF_DAY),
             calendar.get(Calendar.MINUTE),
             0
         )

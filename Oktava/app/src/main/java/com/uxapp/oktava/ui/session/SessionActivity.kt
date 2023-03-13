@@ -1,11 +1,13 @@
 package com.uxapp.oktava.ui.session
 
 
+import android.Manifest
 import android.os.Bundle
 import android.widget.Button
 import android.Manifest.permission.RECORD_AUDIO
 import android.app.Activity
 import android.content.pm.PackageManager
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.appcompat.app.AppCompatActivity
@@ -37,32 +39,8 @@ class SessionActivity : AppCompatActivity() {
                 )
                 .commit()
         }
-        // recordVoiceButton = findViewById<Button>(R.id.buttonRecordVoice)
-        // recordVoiceButton.setOnClickListener{onRecordVoiceButtonClicked()}
-        // val endSessionButton = findViewById<Button>(R.id.endSessionButton)
-        // endSessionButton.setOnClickListener { super.onBackPressed() }
-        // permissionLauncher = registerForActivityResult(
-        //     ActivityResultContracts.RequestPermission()
-        // ) { // isGranted ->
-        // if (isGranted) {
-        //     // Do if the permission is granted
-        // }
-        // else {
-        //     // Do otherwise
-        // }
-        // }
     }
 
-    // override fun onCreateView(
-    //     inflater: LayoutInflater,
-    //     container: ViewGroup?,
-    //     savedInstanceState: Bundle?
-    // ): View? {
-    //     val view = inflater.inflate(R.layout.fragment_session, container, false)
-    //     recordVoiceButton = view.findViewById<Button>(R.id.buttonRecordVoice)
-    //     recordVoiceButton.setOnClickListener{onRecordVoiceButtonClicked()}
-    //     return view
-    // }
     override fun onBackPressed() {
         val fragmentsStack = supportFragmentManager.fragments
         when (fragmentsStack[fragmentsStack.size - 1]) {
@@ -94,4 +72,15 @@ class SessionActivity : AppCompatActivity() {
     }
 
 
+    fun requestPermissions(): Boolean {
+        ActivityCompat.requestPermissions(
+            this,
+            arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE),
+            1
+        )
+        return ContextCompat.checkSelfPermission(
+            this,
+            Manifest.permission.READ_EXTERNAL_STORAGE
+        ) == PackageManager.PERMISSION_GRANTED
+    }
 }

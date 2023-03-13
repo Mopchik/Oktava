@@ -51,7 +51,7 @@ class SessionViewModel(
             sessionStartDate.timeInMillis,
             ArrayList<String>(),
             sessionStartDate,
-            MyTime(-1, -1, -1)
+            MyTime(0, 0, 0)
         )
         sessionsRep.addNewItem(newSession)
     }
