@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.EditText
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import com.uxapp.oktava.R
 import com.uxapp.oktava.ui.main.MainActivity
 
@@ -30,8 +31,11 @@ class WordsNotesFragment : Fragment() {
     }
 
     private fun setupEditText() {
-        val savedWords = songsViewModel.songsCreationProcess.getSongWords()
-        wordsEditText.setText(savedWords)
+        viewLifecycleOwner.lifecycleScope.launchWhenStarted {
+            songsViewModel.songsCreationProcess.getSongWordsFlow().collect {
+                wordsEditText.setText(it)
+            }
+        }
         wordsEditText.addTextChangedListener {
             songsViewModel.songsCreationProcess.setWords(it.toString())
         }

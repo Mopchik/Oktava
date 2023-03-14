@@ -12,6 +12,7 @@ import android.widget.ScrollView
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import com.uxapp.oktava.R
 import com.uxapp.oktava.file_worker.PathUtil
 import com.uxapp.oktava.file_worker.image.ImageReader
@@ -59,7 +60,11 @@ class NotesOfNotesFragment : Fragment() {
         notesScrollView = view.findViewById(R.id.notesCreateNotesScrollView)
         buttonChooseNotes = view.findViewById(R.id.buttonAddNotesCreateNotes)
         chosenNotesImageView = view.findViewById(R.id.chosenNotesCreateNotesImageView)
-        setupImageView(songsViewModel.songsCreationProcess.getSongFileNotes())
+        viewLifecycleOwner.lifecycleScope.launchWhenStarted {
+            songsViewModel.songsCreationProcess.getSongFileNotesFlow().collect {
+                setupImageView(it)
+            }
+        }
         return view
     }
 

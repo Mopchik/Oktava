@@ -1,6 +1,7 @@
 package com.uxapp.oktava.storage.mappers
 
 import com.uxapp.oktava.storage.model.Song
+import com.uxapp.oktava.ui.main.models.SongAboutModel
 import com.uxapp.oktava.ui.main.models.SongWithRecordingsModel
 import com.uxapp.oktava.utils.Genre
 import com.uxapp.oktava.utils.StringConverter.genreToString
@@ -9,6 +10,18 @@ import com.uxapp.oktava.viewmodels.dataModels.SongInListModel
 import com.uxapp.oktava.viewmodels.dataModels.SongSessionModel
 
 object SongsMapper {
+
+    fun mapSongToSongAboutModel(song: Song): SongAboutModel {
+        return SongAboutModel(
+            name = song.name,
+            author = song.author,
+            album = song.album,
+            year = song.year,
+            genres = song.genres,
+            filePicture = song.filePicture
+        )
+    }
+
     fun mapSongToSongInListModel(song: Song): SongInListModel {
         return SongInListModel(
             id = song.id,
@@ -35,9 +48,9 @@ object SongsMapper {
     }
 
     private fun genresToString(genres: List<Genre>): String {
-        if(genres.isEmpty()) return ""
+        if (genres.isEmpty()) return ""
         val stringBuilder = StringBuilder()
-        for(genreInd in 0 until genres.size - 1){
+        for (genreInd in 0 until genres.size - 1) {
             stringBuilder.append(genreToString(genres[genreInd]) + ", ")
         }
         stringBuilder.append(genreToString(genres.last()))

@@ -34,10 +34,10 @@ class CreateAndEditNotesFragment : Fragment() {
     private lateinit var titleTextView: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        runBlocking {
+        super.onCreate(savedInstanceState)
+        lifecycleScope.launch(Dispatchers.IO) {
             songsViewModel.startCreationOrEdition()
         }
-        super.onCreate(savedInstanceState)
     }
 
     override fun onCreateView(

@@ -14,6 +14,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.view.children
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
 import com.uxapp.oktava.R
@@ -86,11 +87,16 @@ class AboutNotesFragment : Fragment() {
     }
 
     private fun setUpDataFields() {
-        val songAboutModel = songsViewModel.songsCreationProcess.getSongAbout()
-        nameEditText.setText(songAboutModel.name)
-        authorEditText.setText(songAboutModel.author)
-        albumEditText.setText(songAboutModel.album)
-        yearEditText.setText(songAboutModel.year)
+        viewLifecycleOwner.lifecycleScope.launchWhenStarted {
+            songsViewModel.songsCreationProcess.getSongAboutFlow().collect { songAboutModel ->
+                nameEditText.setText(songAboutModel.name)
+                authorEditText.setText(songAboutModel.author)
+                albumEditText.setText(songAboutModel.album)
+                yearEditText.setText(songAboutModel.year)
+                setupImageView(songAboutModel)
+                setUpGenresChipGroup(songAboutModel)
+            }
+        }
 
         nameEditText.addTextChangedListener {
             songsViewModel.songsCreationProcess.setName(it.toString())
@@ -104,8 +110,6 @@ class AboutNotesFragment : Fragment() {
         yearEditText.addTextChangedListener {
             songsViewModel.songsCreationProcess.setYear(it.toString())
         }
-        setupImageView(songAboutModel)
-        setUpGenresChipGroup(songAboutModel)
     }
 
     private fun setupImageView(songAboutModel: SongAboutModel) {
