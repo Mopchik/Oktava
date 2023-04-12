@@ -19,6 +19,7 @@ class SongsCreationProcess(
 
     fun start() {
         createdSong = Song.empty()
+        notifySongChanged()
     }
 
     fun setSong(song: Song) {

@@ -104,109 +104,109 @@
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chip_1"
-            style="@style/Widget.Material3.Chip.Filter"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Поп" />
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.Material3.Chip.Filter"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Рэп" />
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.Material3.Chip.Filter"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Хип-хоп" />
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.Material3.Chip.Filter"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="R'n'B" />
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.Material3.Chip.Filter"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Инди" />
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.Material3.Chip.Filter"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Рок" />
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.Material3.Chip.Filter"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Панк" />
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.Material3.Chip.Filter"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Метал" />
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.Material3.Chip.Filter"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Альтернатива" />
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.Material3.Chip.Filter"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Джаз" />
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.Material3.Chip.Filter"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Блюз" />
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.Material3.Chip.Filter"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Кантри" />
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.Material3.Chip.Filter"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ска" />
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.Material3.Chip.Filter"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Фолк" />
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.Material3.Chip.Filter"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Шансон" />
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.Material3.Chip.Filter"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Регги" />
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.Material3.Chip.Filter"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Детство" />
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.Material3.Chip.Filter"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Саундтрек" />

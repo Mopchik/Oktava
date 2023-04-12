@@ -4,6 +4,7 @@ import android.content.res.Resources
 import android.graphics.Color
 import android.util.TypedValue
 import android.view.View
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.ColorRes
@@ -181,5 +182,11 @@ fun emptyCalendar(): Calendar {
         set(Calendar.HOUR_OF_DAY, 12)
         set(Calendar.MINUTE, 0)
         set(Calendar.SECOND, 0)
+    }
+}
+
+fun EditText.setTextIfNotEquals(other: String?) {
+    if(!text.contentEquals(other)) {
+        setText(other)
     }
 }

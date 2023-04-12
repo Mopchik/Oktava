@@ -1,23 +1,24 @@
 package com.uxapp.oktava.ui.main
 
 import android.Manifest
-import android.content.Intent
 import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.google.android.gms.analytics.HitBuilders.ScreenViewBuilder
 import com.uxapp.oktava.R
 import com.uxapp.oktava.application.App
 import com.uxapp.oktava.viewmodels.CalendarViewModel
 import com.uxapp.oktava.viewmodels.RecordingsViewModel
 import com.uxapp.oktava.viewmodels.SongsViewModel
 
+
 class MainActivity : AppCompatActivity() {
     private val app by lazy { App.get(this) }
+    // private val tracker by lazy { app.getDefaultTracker() }
     val songsViewModel: SongsViewModel by viewModels {
         app.viewModelFactory
     }
@@ -33,6 +34,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // tracker?.setScreenName("Image~MainActivity")
+        // tracker?.send(ScreenViewBuilder().build())
         setContentView(R.layout.activity_main)
         requestPermissions()
         if (savedInstanceState == null) {

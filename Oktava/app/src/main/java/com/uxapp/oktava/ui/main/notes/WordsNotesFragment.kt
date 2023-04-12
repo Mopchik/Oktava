@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.uxapp.oktava.R
 import com.uxapp.oktava.ui.main.MainActivity
+import com.uxapp.oktava.utils.setTextIfNotEquals
 
 class WordsNotesFragment : Fragment() {
 
@@ -33,7 +34,7 @@ class WordsNotesFragment : Fragment() {
     private fun setupEditText() {
         viewLifecycleOwner.lifecycleScope.launchWhenStarted {
             songsViewModel.songsCreationProcess.getSongWordsFlow().collect {
-                wordsEditText.setText(it)
+                wordsEditText.setTextIfNotEquals(it)
             }
         }
         wordsEditText.addTextChangedListener {

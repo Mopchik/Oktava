@@ -24,6 +24,7 @@ import com.uxapp.oktava.ui.main.MainActivity
 import com.uxapp.oktava.ui.main.models.SongAboutModel
 import com.uxapp.oktava.utils.Genre
 import com.uxapp.oktava.utils.StringConverter
+import com.uxapp.oktava.utils.setTextIfNotEquals
 
 
 class AboutNotesFragment : Fragment() {
@@ -89,10 +90,10 @@ class AboutNotesFragment : Fragment() {
     private fun setUpDataFields() {
         viewLifecycleOwner.lifecycleScope.launchWhenStarted {
             songsViewModel.songsCreationProcess.getSongAboutFlow().collect { songAboutModel ->
-                nameEditText.setText(songAboutModel.name)
-                authorEditText.setText(songAboutModel.author)
-                albumEditText.setText(songAboutModel.album)
-                yearEditText.setText(songAboutModel.year)
+                nameEditText.setTextIfNotEquals(songAboutModel.name)
+                authorEditText.setTextIfNotEquals(songAboutModel.author)
+                albumEditText.setTextIfNotEquals(songAboutModel.album)
+                yearEditText.setTextIfNotEquals(songAboutModel.year)
                 setupImageView(songAboutModel)
                 setUpGenresChipGroup(songAboutModel)
             }

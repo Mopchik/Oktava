@@ -15,6 +15,8 @@
         <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/drawable/calendar_selected_day.xml" value="0.1025" />
         <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/drawable/calendar_selected_day_menu.xml" value="0.1025" />
         <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/drawable/calendar_today_bg.xml" value="0.1025" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/drawable/ic_ava.xml" value="0.1" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/drawable/ic_ava_rounded.xml" value="0.1" />
         <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/drawable/ic_baseline_check_circle_24.xml" value="0.122" />
         <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/drawable/ic_baseline_circle_24.xml" value="0.1" />
         <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.122" />
@@ -47,7 +49,7 @@
         <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/activity_session.xml" value="0.2418478260869565" />
         <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/calendar_day_layout.xml" value="0.17916666666666667" />
         <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/card.xml" value="0.4" />
-        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/fragment_about_song.xml" value="0.264" />
+        <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/fragment_about_song.xml" value="0.1245136186770428" />
         <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/fragment_begin_training.xml" value="0.25769927536231885" />
         <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/fragment_calendar.xml" value="0.2" />
         <entry key="..\:/Users/kosty/Documents/Oktava/app/src/main/res/layout/fragment_calendar_approve_delete.xml" value="0.1816123188405797" />

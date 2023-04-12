@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "910134972309",
+    "project_id": "op7-5ac74",
+    "storage_bucket": "op7-5ac74.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:910134972309:android:a9373a6dcdce29082fb09c",
+        "android_client_info": {
+          "package_name": "com.uxapp.oktava"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "910134972309-75ksj0rs7v1s3o8hl4n9n2lf73g6e20s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0WnhCHahT1IUgTqpgS2KusetFTZ_7kbo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "910134972309-75ksj0rs7v1s3o8hl4n9n2lf73g6e20s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
